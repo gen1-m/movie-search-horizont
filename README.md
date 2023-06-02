@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), which was done by me [UncrownedKing1](https://github.com/UncrownedKing1)
 
 ## Getting Started
 
@@ -22,17 +22,11 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## 📔 Quick Summary of what you can expect from HorizontMovies 
 
-To learn more about Next.js, take a look at the following resources:
+It is a simple website created with [ODMB Api](https://www.omdbapi.com) and [Next.js](https://nextjs.org/) on top of [React.js](https://react.dev/) for searching movies and all of the information you can possibly think, from the actors, awards, writers, etc. 
+As soon as you open the page you are presented with some of the 'Popular' movies in some very modest cards which display the name, movie paster and the year the movie was made. When you click the card with the title and year, you will be redirected to another page with the plot of the movie and more information regarding it. 
+You can find a useful search feature in the home page to search movies by title and by clicking at the card with the name of the movie, you can go to the movie's own page about the plot and the extended information as you did with movies in the home page. Each movie card has a the movie poster and a ❤️ button to like the movie. When you like a movie, it appears in the home page under the new section 'Favorites'. That's pretty much it.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

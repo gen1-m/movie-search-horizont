@@ -1,7 +1,12 @@
 import axios from "axios";
 
 export default async function handler(req, res) {
-  const response = await axios(`http://www.omdbapi.com/?s=${req.query.search || "Popular"}&apikey=155990d6`);
+  const { search, id } = req.query;
+
+  /* --------- Search Query Backend ---------- */
+  const response = await axios.get(
+      `http://www.omdbapi.com/?s=${search || "Popular"}&apikey=155990d6`
+  );
   const movies = response.data;
   if (movies.Error === "Movie not found!") {
     res.status(200).json({ movies: [] });
@@ -9,11 +14,17 @@ export default async function handler(req, res) {
   }
   if (movies.Error) {
     res.status(500).json({ error: "Internal server error." });
+    return;
   }
-  res.status(200).json({ movies: movies.Search })
-  // return { movies.Search };
 
+  /* --------------- Specific Movie Backend -------------- */
+  const specResponse = await axios.get(
+      `http://www.omdbapi.com/?i=${id || "tt0207201"}&plot=full&apikey=155990d6`
+  );
+  const movie = specResponse.data;
+  if (movie.Error) {
+    res.status(500).json({ movie: "" });
+    return;
+  }
+  res.status(200).json({ movies: movies.Search, movie: movie });
 }
-
-// const res = await fetch(`http://www.omdbapi.com/?s=${searchValue || "Popular"}&apikey=155990d6`);
-// const movieList = await res.json();
