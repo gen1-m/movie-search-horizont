@@ -7,9 +7,9 @@ export default function MovieInfoExtended(props) {
     /* ----------- Handle click event for adding/removing favorites -------- */
     const handleFavoriteClick = () => {
         if (isFavorite) {
-            removeFavorite(movie);
+            removeFavorite(movie.Title);
         } else {
-            addFavorite(movie);
+            addFavorite(movie.Title);
         }
     };
 
