@@ -3,17 +3,16 @@ import Image from "next/image";
 /* ---------- Movie Info component with more info than movie cards ----------- */
 export default function MovieInfoExtended(props) {
     const { movie, addFavorite, removeFavorite, isFavorite } = props;
-
+    
     /* ----------- Handle click event for adding/removing favorites -------- */
     const handleFavoriteClick = () => {
         if (isFavorite) {
-            removeFavorite(movie.imdbID);
+            removeFavorite(movie);
         } else {
             addFavorite(movie);
         }
     };
 
-    console.log(movie);
     return (
         <div className="grid grid-cols-2 rounded-lg bg-gray-900">
             <div className="p-16 max-w-xl">
