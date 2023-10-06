@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import MovieInfoExtended from "@/pages/movie/[id]/MovieInfoExtended";
+import MovieInfoExtended from "@/components/MovieInfoExtended";
 import {
     addFavorite,
     removeFavorite,
