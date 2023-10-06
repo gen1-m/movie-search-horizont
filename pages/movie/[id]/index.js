@@ -15,7 +15,7 @@ import {
 export default function Info() {
     const router = useRouter();
     const { id } = router.query;
-    const [movie, setMovie] = useState("");
+    const [movie, setMovie] = useState(undefined);
     const [favorites, setFavorites] = useState([]);
 
     /* --- Fetch movie data from the API based on the ID in the URL query --- */
