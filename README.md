@@ -28,8 +28,6 @@ It is a simple website created with [OMDb Api](https://www.omdbapi.com) and [Nex
 As soon as you open the page you are presented with some of the 'Popular' movies in some very modest cards which display the name, movie paster and the year the movie was made. When you click the card with the title and year, you will be redirected to another page with the plot of the movie and more information regarding it. 
 You can find a useful search feature in the home page to search movies by title and by clicking at the card with the name of the movie, you can go to the movie's own page about the plot and the extended information as you did with movies in the home page. Each movie card has a the movie poster and a ❤️ button to like the movie. When you like a movie, it appears in the home page under the new section 'Favorites'. That's pretty much it.
 
-### Note:
-Currently the website is not deployed on the World Wide Web through a provider like Vercel or Google Cloud, but I am going to very soon...
 
 
 
