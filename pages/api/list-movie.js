@@ -2,10 +2,11 @@ import axios from "axios";
 
 export default async function handler(req, res) {
   const { search, id } = req.query;
+  const API_KEY=process.env.API_KEY;
 
   /* --------- Search Query Backend ---------- */
   const response = await axios.get(
-      `http://www.omdbapi.com/?s=${search || "Popular"}&apikey=155990d6`
+      `http://www.omdbapi.com/?s=${search || "Popular"}&apikey=${API_KEY}`
   );
   const movies = response.data;
   if (movies.Error === "Movie not found!") {
