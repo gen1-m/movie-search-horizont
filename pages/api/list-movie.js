@@ -20,7 +20,7 @@ export default async function handler(req, res) {
 
   /* --------------- Specific Movie Backend -------------- */
   const specResponse = await axios.get(
-      `http://www.omdbapi.com/?i=${id || "tt0207201"}&plot=full&apikey=155990d6`
+      `http://www.omdbapi.com/?i=${id || "tt0207201"}&plot=full&apikey=${API_KEY}`
   );
   const movie = specResponse.data;
   if (movie.Error) {
